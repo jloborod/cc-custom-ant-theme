@@ -6,7 +6,8 @@
   "dependencies": {
     "antd": "^2.1.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "atool-build": "^0.9.0",
@@ -33,7 +34,10 @@
     "build": "atool-build",
     "lint": "eslint --ext .js,.jsx src/",
     "start": "dora --plugins webpack",
-    "test": "atool-test-mocha ./**/__tests__/*-test.js"
+    "test": "atool-test-mocha ./**/__tests__/*-test.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "theme": "./theme.js"
+  "theme": "./theme.js",
+  "snyk": true
 }
